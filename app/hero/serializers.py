@@ -4,6 +4,7 @@ from .models import Weapon
 from .models import Ability
 from .models import Team
 from .models import Costume
+from .models import Hero
 
 
 class WeaponSerializer(serializers.ModelSerializer):
@@ -32,3 +33,10 @@ class CostumeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Costume
         fields = ['top', 'top_color', 'bottom', 'bottom_color', 'cape', 'cape_color', 'mask', 'mask_color']
+
+
+class HeroSerializer(serializers.ModelSerializer):
+    """Serializer for hero"""
+    class Meta:
+        model = Hero
+        fields = ['name', 'created', 'modified', 'real_name', 'aliases', 'costume', 'weapons', 'abilities', 'affiliations']

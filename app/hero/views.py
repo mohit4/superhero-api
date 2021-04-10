@@ -6,10 +6,12 @@ from .models import Weapon
 from .models import Ability
 from .models import Team
 from .models import Costume
+from .models import Hero
 from .serializers import WeaponSerializer
 from .serializers import AbilitySerializer
 from .serializers import TeamSerializer
 from .serializers import CostumeSerializer
+from .serializers import HeroSerializer
 
 
 class WeaponViewSet(viewsets.ModelViewSet):
@@ -34,3 +36,9 @@ class CostumeViewSet(viewsets.ModelViewSet):
     """Entire costume view set with CRUD views"""
     queryset = Costume.objects.all()
     serializer_class = CostumeSerializer
+
+
+class HeroViewSet(viewsets.ModelViewSet):
+    """Entire hero view set with CRUD views"""
+    queryset = Hero.objects.all()
+    serializer_class = HeroSerializer

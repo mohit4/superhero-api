@@ -25,7 +25,12 @@ SECRET_KEY = '2jskq$41%f-(o4q5u5jsil-!qt=0w90pcbgms%x_ou$#d$zf!c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
+    'superhero-api-app.herokuapp.com'
+]
 
 
 # Application definition
